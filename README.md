@@ -1,9 +1,5 @@
 nest js backend media library project
 ---
-our application's main endpoint returns a message saying "hi"
-
-
-<img width="1406" height="911" alt="Ekran görüntüsü 2025-12-24 164905" src="https://github.com/user-attachments/assets/fa32586c-d59e-4f61-aa52-ccca3e4ac1f3" />
 
 
 At the /auth/register endpoint, we can create an account using our username and password and receive an accessToken and a refreshToken
@@ -33,6 +29,10 @@ Users can refresh their accessToken and refreshToken using the /auth/refresh
 <img width="951" height="842" alt="Ekran görüntüsü 2025-12-25 130214" src="https://github.com/user-attachments/assets/27a082d8-51b7-4ab6-af85-fac7ea640ac3" />
 <img width="954" height="276" alt="Ekran görüntüsü 2025-12-25 130221" src="https://github.com/user-attachments/assets/39f539d5-8ce3-489e-b6d4-07db8d937246" />
 
+also our application's main endpoint returns a message saying "hi"
+
+
+<img width="1406" height="911" alt="Ekran görüntüsü 2025-12-24 164905" src="https://github.com/user-attachments/assets/fa32586c-d59e-4f61-aa52-ccca3e4ac1f3" />
 
 To be able to use the following endpoints, we need to be authorized, as requested in the task also
 
