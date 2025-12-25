@@ -1,98 +1,49 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+nest js backend media library project
+---
+our application's main endpoint returns a message saying "hi"
+<img width="1406" height="911" alt="Ekran görüntüsü 2025-12-24 164905" src="https://github.com/user-attachments/assets/fa32586c-d59e-4f61-aa52-ccca3e4ac1f3" />
+At the /auth/register endpoint, we can create an account using our username and password and receive an accessToken and a refreshToken
+<img width="953" height="645" alt="Ekran görüntüsü 2025-12-25 125623" src="https://github.com/user-attachments/assets/6983fe14-fc58-4354-8669-23acf697135f" />
+<img width="960" height="499" alt="Ekran görüntüsü 2025-12-25 125631" src="https://github.com/user-attachments/assets/c258122b-f40f-44c9-809b-5c8536d013eb" />
+We can see the user we created via MongoDB Atlas
+<img width="622" height="153" alt="Ekran görüntüsü 2025-12-25 125922" src="https://github.com/user-attachments/assets/4709fb19-4c5b-4161-bafe-18e53c20df1a" />
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+We can log in to an existing user using the /auth/login endpoint, which generates an accessToken and a refreshToken for us
+<img width="1140" height="753" alt="Ekran görüntüsü 2025-12-25 130024" src="https://github.com/user-attachments/assets/5ea6139e-a3e2-47af-b830-16eb52990cb3" />
+<img width="1142" height="596" alt="Ekran görüntüsü 2025-12-25 130033" src="https://github.com/user-attachments/assets/1cd68a96-b00c-4288-91da-0097b58f67f5" />
+Users can refresh their accessToken and refreshToken using the /auth/refresh
+<img width="951" height="842" alt="Ekran görüntüsü 2025-12-25 130214" src="https://github.com/user-attachments/assets/27a082d8-51b7-4ab6-af85-fac7ea640ac3" />
+<img width="954" height="276" alt="Ekran görüntüsü 2025-12-25 130221" src="https://github.com/user-attachments/assets/39f539d5-8ce3-489e-b6d4-07db8d937246" />
+To be able to use the following endpoints, we need to be authorized, as requested in the task also
+<img width="518" height="232" alt="Ekran görüntüsü 2025-12-25 130318" src="https://github.com/user-attachments/assets/6163c705-49d9-4fa7-ba9c-dfe51d210a72" />
+Once authorized, we can view our own information with a /users/me GET request
+<img width="1137" height="947" alt="Ekran görüntüsü 2025-12-25 130351" src="https://github.com/user-attachments/assets/e283df94-b865-41c4-a6c3-5365a78ee0e1" />
+We can upload a JPEG file smaller than 5 MB
+<img width="1143" height="1284" alt="Ekran görüntüsü 2025-12-25 140657" src="https://github.com/user-attachments/assets/e42ed19a-ad73-41c6-aea9-bfdd907140ad" />
+<img width="748" height="634" alt="Ekran görüntüsü 2025-12-25 140732" src="https://github.com/user-attachments/assets/7f375841-5414-49e7-a045-85081207eeb1" />
+We can see all the jpeg files we uploaded
+<img width="1137" height="939" alt="Ekran görüntüsü 2025-12-25 130844" src="https://github.com/user-attachments/assets/958e2356-684c-4dda-8fc6-751c036bb6ef" />
+<img width="1139" height="380" alt="Ekran görüntüsü 2025-12-25 130852" src="https://github.com/user-attachments/assets/5df4e7d6-98ac-4795-85c7-70b614c21e13" />
+allowed users can view the metadata of a media file via using objectid of media
+<img width="1126" height="817" alt="Ekran görüntüsü 2025-12-25 130923" src="https://github.com/user-attachments/assets/7cd1f397-8a14-45aa-b9d8-015d18a84c0c" />
+<img width="1140" height="423" alt="Ekran görüntüsü 2025-12-25 130930" src="https://github.com/user-attachments/assets/6b735f4f-335d-42d7-8789-0f5737306a4a" />
+Owners can delete their own media
+<img width="1136" height="845" alt="Ekran görüntüsü 2025-12-25 131101" src="https://github.com/user-attachments/assets/984a6916-2a01-4e31-91f7-05825b05fe6e" />
+<img width="1138" height="348" alt="Ekran görüntüsü 2025-12-25 131110" src="https://github.com/user-attachments/assets/c5ae8b0b-7b79-446e-9ea0-673f16ae2351" />
+allowed users can download jpeg file
+<img width="1134" height="687" alt="Ekran görüntüsü 2025-12-25 131225" src="https://github.com/user-attachments/assets/0e17d0eb-ce04-4e62-bcd8-5f9b65170f3f" />
+<img width="449" height="136" alt="Ekran görüntüsü 2025-12-25 131233" src="https://github.com/user-attachments/assets/372cb8b6-7560-4f5c-8107-391bc59e06c2" />
+users can view other users they allowed by entering the object id of their media
+<img width="1141" height="734" alt="Ekran görüntüsü 2025-12-25 131316" src="https://github.com/user-attachments/assets/81e2e3ca-e19e-4261-a560-fee7fe8e93d4" />
+<img width="1145" height="352" alt="Ekran görüntüsü 2025-12-25 131323" src="https://github.com/user-attachments/assets/3f06d8db-e335-4d92-a2b4-f8bf9152e3b9" />
+now with using this two users, differentuser@gmail.com will upload a jpeg file, then give user@gmail.com to permission to see it.
+<img width="631" height="328" alt="Ekran görüntüsü 2025-12-25 132500" src="https://github.com/user-attachments/assets/89c075b1-6f8f-401e-8956-108d03d1595e" />
+differentuser@gmail.com uploads a picture and gives user@gmail.com permission
+<img width="993" height="748" alt="Ekran görüntüsü 2025-12-25 132531" src="https://github.com/user-attachments/assets/db8c136f-2632-4fa8-883a-8998fc17391a" />
+<img width="997" height="740" alt="Ekran görüntüsü 2025-12-25 132538" src="https://github.com/user-attachments/assets/d1a9b74b-b6fe-49d6-8153-b5b256e8af17" />
+now user@gmail.com allowed to see and download the picture
+<img width="392" height="219" alt="Ekran görüntüsü 2025-12-25 132735" src="https://github.com/user-attachments/assets/f50c22c4-e214-44bf-a4fa-6eeef6952b43" />
+we can also remove a permission with using the same API endpoint
+<img width="990" height="949" alt="Ekran görüntüsü 2025-12-25 132559" src="https://github.com/user-attachments/assets/daad2897-eee0-46bb-ae98-ac3e5a36d5c8" />
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Project setup
-
-```bash
-$ npm install
-```
-
-## Compile and run the project
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+These were the test cases for our project. If there are any cases we missed or if you'd like to add any, please feel free to contact me. Thank you for your time, and have a great day.
